@@ -290,8 +290,7 @@ a.download-btn:hover, button.play-btn:hover {
   <section id="voiceTool" class="tool-container" aria-live="polite" hidden>
     <h2>ভয়েস তৈরি করুন</h2>
     <label for="voice-select">ভয়েস নির্বাচন করুন:</label>
-    <!-- এখানে শুধু size="12" বাদ -->
-    <select id="voice-select"></select>
+    <select id="voice-select" size="12"></select>
     <label for="voice-text">ভয়েসের জন্য টেক্সট লিখুন:</label>
     <textarea id="voice-text" rows="3" placeholder="আপনার টেক্সট লিখুন"></textarea>
     <button class="action-btn" onclick="generateVoice()">ভয়েস তৈরি করুন</button>
@@ -557,7 +556,7 @@ function convertVideo() {
 
 // Voice Tool: ১০০+ জনপ্রিয় ভয়েস প্যাক (Google, Amazon, Microsoft, IBM, Apple, CereProc, ইত্যাদি)
 const popularVoices = [
-  // ... (তোমার আগের ভয়েস লিস্ট অপরিবর্তিত)
+  // Google WaveNet Voices (High Quality)
   {name: "Google US English", gender: "male", lang: "en-US"},
   {name: "Google UK English Female", gender: "female", lang: "en-GB"},
   {name: "Google UK English Male", gender: "male", lang: "en-GB"},
@@ -570,6 +569,8 @@ const popularVoices = [
   {name: "Google 한국의", gender: "female", lang: "ko-KR"},
   {name: "Google Русский", gender: "female", lang: "ru-RU"},
   {name: "Google 中文（普通话）", gender: "female", lang: "zh-CN"},
+  
+  // Amazon Polly Voices
   {name: "Amy", gender: "female", lang: "en-GB"},
   {name: "Brian", gender: "male", lang: "en-GB"},
   {name: "Emma", gender: "female", lang: "en-GB"},
@@ -581,6 +582,8 @@ const popularVoices = [
   {name: "Salli", gender: "female", lang: "en-US"},
   {name: "Aditi", gender: "female", lang: "hi-IN"},
   {name: "Raveena", gender: "female", lang: "en-IN"},
+  
+  // Microsoft Azure Voices
   {name: "Microsoft David", gender: "male", lang: "en-US"},
   {name: "Microsoft Zira", gender: "female", lang: "en-US"},
   {name: "Microsoft Mark", gender: "male", lang: "en-US"},
@@ -591,6 +594,8 @@ const popularVoices = [
   {name: "Microsoft Huihui", gender: "female", lang: "zh-CN"},
   {name: "Microsoft Ayumi", gender: "female", lang: "ja-JP"},
   {name: "Microsoft Heami", gender: "female", lang: "ko-KR"},
+  
+  // Apple Voices
   {name: "Apple Samantha", gender: "female", lang: "en-US"},
   {name: "Apple Daniel", gender: "male", lang: "en-GB"},
   {name: "Apple Tessa", gender: "female", lang: "en-ZA"},
@@ -598,15 +603,23 @@ const popularVoices = [
   {name: "Apple Mei-Jia", gender: "female", lang: "zh-TW"},
   {name: "Apple Amelie", gender: "female", lang: "fr-CA"},
   {name: "Apple Thomas", gender: "male", lang: "fr-FR"},
+  
+  // CereProc Voices (Scottish, Irish etc.)
   {name: "CereProc Stuart", gender: "male", lang: "en-GB"},
   {name: "CereProc Heather", gender: "female", lang: "en-GB"},
   {name: "CereProc Ceitidh", gender: "female", lang: "gd-GB"},
+  
+  // Nuance Voices
   {name: "Nuance Paul", gender: "male", lang: "en-US"},
   {name: "Nuance Serena", gender: "female", lang: "en-US"},
+  
+  // Bengali/Hindi Voices
   {name: "Bengali Female", gender: "female", lang: "bn-IN"},
   {name: "Bengali Male", gender: "male", lang: "bn-IN"},
   {name: "Hindi Female", gender: "female", lang: "hi-IN"},
   {name: "Hindi Male", gender: "male", lang: "hi-IN"},
+  
+  // Other Popular International Voices
   {name: "Lekha", gender: "female", lang: "ta-IN"},
   {name: "Yelda", gender: "female", lang: "tr-TR"},
   {name: "Damayanti", gender: "female", lang: "id-ID"},
