@@ -7,16 +7,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@600;700&family=Tiro+Bangla:ital,wght@0,400;1,400&family=Hind+Siliguri:wght@400;700&family=Poppins:wght@700&family=Nunito:wght@700&family=Inter:wght@700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --main-bg: #f8f5f2; /* Cosmic Latte */
-  --drawer-bg: linear-gradient(145deg, #0f2027 0%, #203a43 50%, #2c5364 100%); /* Deep Ocean Blue Gradient */
+  --main-bg: #f8f5f2;
+  --drawer-bg: linear-gradient(145deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
   --card-bg: rgba(255, 255, 255, 0.9);
-  --primary: #00796b; /* Teal accent */
-  --primary-dark: #004d40; /* Darker Teal */
-  --accent: #ffc107; /* Gold Accent */
-  --text-primary: #212121; /* Dark Gray for text */
-  --text-secondary: #757575; /* Medium Gray for secondary text */
-  --text-on-drawer: #e0f2f1; /* Light teal for text on dark drawer */
-  --border-soft: 1px solid #e0e0e0; /* Lighter border */
+  --primary: #00796b;
+  --primary-dark: #004d40;
+  --accent: #ffc107;
+  --text-primary: #212121;
+  --text-secondary: #757575;
+  --text-on-drawer: #e0f2f1;
+  --border-soft: 1px solid #e0e0e0;
   --shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   --shadow-hover: 0 12px 35px rgba(0, 0, 0, 0.15);
   --font-bn: 'Baloo Da 2', 'Tiro Bangla', 'Hind Siliguri', 'Noto Sans Bengali', sans-serif;
@@ -35,11 +35,11 @@ body {
 header {
   background: rgba(255,255,255,0.95);
   color: var(--primary-dark);
-  font-size: 2rem; /* Slightly reduced */
-  font-weight: 700; /* Adjusted weight */
+  font-size: 2rem;
+  font-weight: 700;
   padding: 15px 10px;
   text-align: center;
-  letter-spacing: 1.5px; /* Reduced for modern feel */
+  letter-spacing: 1.5px;
   position: fixed;
   width: 100%;
   top: 0; left: 0;
@@ -51,14 +51,14 @@ header {
 }
 header .title {
   font-family: var(--font-en);
-  font-size: 2rem; /* Matched header */
+  font-size: 2rem;
   font-weight: 700;
   letter-spacing: 2px;
   color: var(--primary-dark);
   background: linear-gradient(90deg, var(--primary) 30%, var(--primary-dark) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 1px 1px 2px rgba(0, 77, 64, 0.1); /* Subtle shadow */
+  text-shadow: 1px 1px 2px rgba(0, 77, 64, 0.1);
   padding: 0 10px;
   border-radius: var(--border-radius-small);
   transition: all 0.3s ease;
@@ -72,7 +72,7 @@ header .title:hover {
 header .logo-img {
   height: 42px; width: 42px; margin-left: 14px; border-radius: var(--border-radius-small); box-shadow: 0 2px 8px rgba(0, 121, 107, 0.2);
   background: #fff;
-  padding: 3px; /* Added padding for logo */
+  padding: 3px;
   object-fit: contain;
   vertical-align: middle;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -82,7 +82,7 @@ header .logo-img:hover {
     box-shadow: 0 4px 12px rgba(0, 121, 107, 0.3);
 }
 label[for="drawerToggle"] {
-  position: fixed; top: 22px; left: 20px; /* Adjusted position */
+  position: fixed; top: 22px; left: 20px;
   font-size: 2rem; color: var(--primary-dark);
   cursor: pointer; z-index: 1103; user-select: none;
   transition: color 0.3s ease, transform 0.3s ease;
@@ -95,19 +95,19 @@ label[for="drawerToggle"]:hover {
 #drawerToggle:checked ~ #drawer { transform: translateX(0); }
 #drawer {
   position: fixed; top: 0; bottom: 0; left: 0;
-  width: 220px; /* Slightly wider */
+  width: 220px;
   background: var(--drawer-bg);
   box-shadow: 5px 0 25px rgba(0,0,0,0.2);
-  padding-top: 70px; /* Adjusted padding */
+  padding-top: 70px;
   overflow-y: auto;
-  transform: translateX(-260px); /* Adjusted for new width */
-  transition: transform 0.35s cubic-bezier(0.25, 0.1, 0.25, 1); /* Smoother animation */
+  transform: translateX(-260px);
+  transition: transform 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
   z-index: 2000;
   border-right: none !important;
   border-radius: 0 var(--border-radius-main) var(--border-radius-main) 0;
 }
 #drawer label.close-btn {
-  position: absolute; top: 15px; right: 15px; /* Adjusted position */
+  position: absolute; top: 15px; right: 15px;
   font-size: 2.2rem; color: var(--text-on-drawer); cursor: pointer;
   transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -118,31 +118,66 @@ label[for="drawerToggle"]:hover {
 #drawer ul { list-style: none; margin:0; padding:0; }
 #drawer ul li { border-bottom: 1px solid rgba(255,255,255,0.1); }
 #drawer ul li button {
-  width: 100%; padding: 16px 20px; /* Adjusted padding */
+  width: 100%; padding: 16px 20px;
   background: transparent; border: none;
-  color: var(--text-on-drawer); font-size: 1.05rem; /* Adjusted size */
+  color: var(--text-on-drawer); font-size: 1.05rem;
   font-family: var(--font-bn), var(--font-en);
   text-align: left; cursor: pointer;
   font-weight: 600; letter-spacing: .3px;
-  border-radius: 0; /* Removed border-radius for full width highlight */
+  border-radius: 0;
   transition: background 0.2s ease-in-out, color 0.2s ease-in-out, padding-left 0.2s ease-in-out;
 }
 #drawer ul li button:hover, #drawer ul li button.active {
   background: rgba(255, 255, 255, 0.1);
   color: var(--accent);
-  padding-left: 25px; /* Indent on hover/active */
+  padding-left: 25px;
 }
 #drawer ul li button.active {
     border-left: 3px solid var(--accent);
 }
+
+/* AI Tools Section Styles */
+.ai-tool-card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius-small);
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: var(--shadow);
+  border: var(--border-soft);
+}
+.ai-tool-card h3 {
+  margin-top: 0;
+  color: var(--primary-dark);
+  border-bottom: 1px solid var(--primary);
+  padding-bottom: 5px;
+}
+.ai-tool-card p {
+  margin: 8px 0;
+  color: var(--text-secondary);
+}
+.ai-tool-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--border-radius-small);
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+.ai-tool-link:hover {
+  background: var(--primary-dark);
+}
+
 main {
-  max-width: 980px; margin: 110px auto 40px; padding: 0 15px; /* Adjusted margins/padding */
+  max-width: 980px; margin: 110px auto 40px; padding: 0 15px;
 }
 section {
-  margin-bottom: 40px; /* Increased margin */
+  margin-bottom: 40px;
   background: var(--card-bg);
   border-radius: var(--border-radius-main);
-  padding: 25px; /* Uniform padding */
+  padding: 25px;
   box-shadow: var(--shadow);
   backdrop-filter: blur(10px);
   border: var(--border-soft);
@@ -154,23 +189,23 @@ section:hover {
 }
 h2 {
   font-family: var(--font-bn), var(--font-en);
-  font-size: 1.4rem; margin-bottom: 18px; /* Adjusted size/margin */
+  font-size: 1.4rem; margin-bottom: 18px;
   color: var(--primary-dark); border-bottom: 2px solid var(--primary);
-  padding-bottom: 10px; text-shadow: none; /* Removed text-shadow for cleaner look */
-  letter-spacing: 0.8px; /* Adjusted spacing */
+  padding-bottom: 10px; text-shadow: none;
+  letter-spacing: 0.8px;
 }
 label {color: var(--text-secondary); font-weight:600; font-family:var(--font-bn),var(--font-en);}
 input, select, textarea {
   width: 100%; padding: 12px 15px; border-radius: var(--border-radius-small);
-  border: 1px solid #ccc; /* Added subtle border */
-  font-size: 1rem; outline: none; margin-top: 10px; /* Adjusted margin */
+  border: 1px solid #ccc;
+  font-size: 1rem; outline: none; margin-top: 10px;
   background: #fff; color: var(--text-primary);
   font-family: var(--font-bn), var(--font-en);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05) inset; /* Subtle inset shadow */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05) inset;
   transition: box-shadow 0.25s ease, border-color 0.25s ease;
 }
 input:focus, select:focus, textarea:focus {
-  box-shadow: 0 0 0 3px rgba(0, 121, 107, 0.2); /* Focus ring */
+  box-shadow: 0 0 0 3px rgba(0, 121, 107, 0.2);
   border-color: var(--primary);
 }
 img.hero-img {
@@ -184,25 +219,25 @@ img.hero-img {
 img.hero-img:hover {
     transform: scale(1.03);
 }
-/* Consolidated button styles */
+
 button.action-btn, a.download-btn, button.play-btn {
-  display: inline-block; margin: 15px 10px 0 0; /* Adjusted margin */
+  display: inline-block; margin: 15px 10px 0 0;
   background: var(--primary);
-  color: #fff; border: none; padding: 12px 30px; /* Adjusted padding */
-  border-radius: var(--border-radius-small); font-weight: 700; font-size: 1.05rem; /* Adjusted font size */
+  color: #fff; border: none; padding: 12px 30px;
+  border-radius: var(--border-radius-small); font-weight: 700; font-size: 1.05rem;
   text-decoration: none; box-shadow: 0 4px 12px rgba(0, 121, 107, 0.25);
   font-family: var(--font-en), var(--font-bn);
   transition: background 0.25s ease, transform 0.15s ease, box-shadow 0.25s ease;
   cursor:pointer;
-  text-transform: uppercase; /* Modern touch */
+  text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 button.action-btn:hover, a.download-btn:hover, button.play-btn:hover {
-  background: var(--primary-dark); transform: translateY(-3px) scale(1.03); /* Lift effect */
+  background: var(--primary-dark); transform: translateY(-3px) scale(1.03);
   box-shadow: 0 6px 18px rgba(0, 77, 64, 0.3);
 }
 .ad-box {
-  background: #e8eaf6; /* Indigo accent for ad box */
+  background: #e8eaf6;
   color: var(--text-secondary); text-align: center; border-radius: var(--border-radius-small);
   margin: 20px 0; padding: 15px;
   font-weight: 600; font-size: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05);
@@ -212,8 +247,8 @@ button.action-btn:hover, a.download-btn:hover, button.play-btn:hover {
 }
 .loader {
   border: 4px solid #e0e0e0; border-top: 4px solid var(--primary);
-  border-radius: 50%; width: 32px; height: 32px; /* Slightly larger */
-  animation: spin 0.8s linear infinite; margin: 20px auto; /* Faster spin */
+  border-radius: 50%; width: 32px; height: 32px;
+  animation: spin 0.8s linear infinite; margin: 20px auto;
 }
 #voice-select {
   width: 100%;
@@ -234,7 +269,7 @@ button.action-btn:hover, a.download-btn:hover, button.play-btn:hover {
   box-shadow: 0 0 0 3px rgba(0, 121, 107, 0.2);
   outline: none;
 }
-.rounded-image { /* Class for barcode/resized images */
+.rounded-image {
     border-radius: var(--border-radius-small);
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     padding: 5px;
@@ -242,7 +277,6 @@ button.action-btn:hover, a.download-btn:hover, button.play-btn:hover {
     border: 1px solid #eee;
 }
 @keyframes spin { 0% { transform: rotate(0deg);} 100% { transform: rotate(360deg);} }
-/* Added keyframes for subtle fade-in for sections */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
@@ -252,7 +286,7 @@ button.action-btn:hover, a.download-btn:hover, button.play-btn:hover {
 }
 
 @media (max-width: 700px) {
-  main { margin: 90px 10px 30px; padding: 0 5px;} /* Adjusted main margin */
+  main { margin: 90px 10px 30px; padding: 0 5px;}
   #drawer { width: 200px; padding-top: 65px;}
   label[for="drawerToggle"] { font-size: 1.8rem; left: 15px; top: 18px;}
   header { padding: 12px 10px; font-size: 1.8rem; }
@@ -261,6 +295,7 @@ button.action-btn:hover, a.download-btn:hover, button.play-btn:hover {
   section { padding: 20px; }
   h2 { font-size: 1.25rem; }
   button.action-btn, a.download-btn, button.play-btn { font-size: 0.95rem; padding: 10px 20px; }
+  .ai-tool-card { padding: 12px; }
 }
 </style>
 </head>
@@ -274,6 +309,13 @@ button.action-btn:hover, a.download-btn:hover, button.play-btn:hover {
 <nav id="drawer" aria-label="Tool navigation drawer">
   <label for="drawerToggle" class="close-btn" aria-label="Close menu">&times;</label>
   <ul id="toolList" role="menu" aria-label="Tool list"></ul>
+  
+  <!-- All AI Tools Button -->
+  <ul>
+    <li>
+      <button id="showAIToolsBtn">All AI Tools</button>
+    </li>
+  </ul>
 </nav>
 <main>
   <!-- হোমপেজ -->
@@ -289,6 +331,16 @@ button.action-btn:hover, a.download-btn:hover, button.play-btn:hover {
     <p style="margin-top:14px; color: var(--text-secondary);">এক ক্লিকে QR কোড, বারকোড, ছবি রিসাইজ, ভয়েস তৈরি, ভিডিও কনভার্টসহ আরও অনেক টুলস! সহজ, দ্রুত, ফ্রি।</p>
     <div class="ad-box" id="ad-home"></div>
   </section>
+  
+  <!-- AI Tools Section -->
+  <section id="aiToolsSection" class="tool-container" aria-live="polite" hidden>
+    <h2>All Free AI Tools</h2>
+    <div id="aiToolsListContainer">
+      <!-- AI Tools will be inserted here by JavaScript -->
+    </div>
+    <button class="action-btn" onclick="hideAITools()">Back to Home</button>
+  </section>
+
   <!-- QR Code Generator -->
   <section id="qrCodeTool" class="tool-container" aria-live="polite" hidden>
     <h2>QR কোড তৈরি করুন</h2>
@@ -298,7 +350,7 @@ button.action-btn:hover, a.download-btn:hover, button.play-btn:hover {
       <option value="facebook">Facebook</option>
       <option value="gmail">Gmail</option>
       <option value="tiktok">TikTok</option>
-      <option value="instagram">Instagram</option>
+     <option value="instagram">Instagram</option>
       <option value="whatsapp">WhatsApp</option>
       <option value="twitter">Twitter</option>
       <option value="snapchat">Snapchat</option>
@@ -366,7 +418,7 @@ button.action-btn:hover, a.download-btn:hover, button.play-btn:hover {
     <div style="margin-top:15px; text-align:center;">
       <button class="play-btn" id="play-voice" style="display:none;">▶️ শুনুন</button>
       <a href="#" id="download-voice" class="download-btn" style="display:none;">ডাউনলোড</a>
-      <audio id="voice-audio" style="display:none; width: 100%; margin-top: 10px;"></audio> <!-- Added width and margin -->
+      <audio id="voice-audio" style="display:none; width: 100%; margin-top: 10px;"></audio>
     </div>
   </section>
 </main>
@@ -403,45 +455,166 @@ tools.forEach((tool, idx) => {
   toolList.appendChild(li);
 });
 
-// Failover Ads Loader (শুধু হোমপেজের এড বক্সে)
+// AI Tools Data
+const aiTools = [
+  {
+    name: "Aixploria",
+    description: "৫,০০০+ ফ্রি AI টুলসের ডিরেক্টরি",
+    details: "বিভিন্ন ক্যাটাগরি ও ফিচারের উপর ভিত্তি করে AI টুলস খোঁজার সুযোগ।",
+    link: "https://www.aixploria.com/en/free-ai/"
+  },
+  {
+    name: "Reddit AI Tools",
+    description: "১,০০০+ AI টুলসের তালিকা স্প্রেডশীটে",
+    details: "Reddit কমিউনিটির তৈরি বিশাল AI টুলস ডাটাবেস",
+    link: "https://www.reddit.com/r/n8n/comments/1idgl31/the_ultimate_list_of_ai_tools_in_2025/"
+  },
+  {
+    name: "Leonardo AI",
+    description: "AI চিত্র তৈরি",
+    details: "প্রতিদিন ৫০টি ছবি তৈরি করতে পারবেন",
+    link: "https://app.leonardo.ai"
+  },
+  {
+    name: "Bing Image Creator",
+    description: "DALL·E 3 দিয়ে ছবি তৈরি",
+    details: "প্রতিদিন প্রথম ১০০টি ছবি দ্রুত তৈরি করা যায়, এরপর ধীরে",
+    link: "https://www.bing.com/create"
+  },
+  {
+    name: "Google Gemini",
+    description: "কোড লেখা সহায়তা",
+    details: "মাসে ১৮০,০০০ কোড পর্যন্ত ব্যবহার করতে পারবেন",
+    link: "https://cloud.google.com"
+  },
+  {
+    name: "Grammarly",
+    description: "লেখার সংশোধন",
+    details: "মাসে ১০০টি AI প্রম্পট ব্যবহার করতে পারবেন",
+    link: "https://www.grammarly.com"
+  },
+  {
+    name: "Copy.ai",
+    description: "কনটেন্ট তৈরি",
+    details: "মাসে ২,০০০ শব্দ পর্যন্ত ব্যবহার করতে পারবেন",
+    link: "https://www.copy.ai"
+  },
+  {
+    name: "Taskade",
+    description: "নোট, টাস্ক, AI সহায়তা",
+    details: "মাসে ১,০০০ অনুরোধ পর্যন্ত ব্যবহার করতে পারবেন",
+    link: "https://www.taskade.com"
+  },
+  {
+    name: "Perplexity.ai",
+    description: "AI সার্চ ইঞ্জিন",
+    details: "অসীমিত ব্যবহার করতে পারবেন",
+    link: "https://www.perplexity.ai"
+  },
+  {
+    name: "Lumen5",
+    description: "টেক্সট থেকে ভিডিও",
+    details: "মাসে ৫টি ভিডিও তৈরি করতে পারবেন",
+    link: "https://www.lumen5.com"
+  },
+  {
+    name: "Fliki",
+    description: "ব্লগ থেকে ভিডিও",
+    details: "মাসে ৫ মিনিট ভিডিও তৈরি করতে পারবেন",
+    link: "https://fliki.ai"
+  },
+  {
+    name: "SciSpace",
+    description: "একাডেমিক পেপার বিশ্লেষণ",
+    details: "অসীমিত ব্যবহার করতে পারবেন",
+    link: "https://www.scispace.com"
+  }
+];
+
+// Show AI Tools
+function showAITools() {
+  document.querySelectorAll('.tool-container').forEach(div => {
+    div.classList.remove('active'); div.hidden = true;
+  });
+  
+  const aiToolsSection = document.getElementById('aiToolsSection');
+  const aiToolsListContainer = document.getElementById('aiToolsListContainer');
+  
+  // Clear previous list
+  aiToolsListContainer.innerHTML = '';
+  
+  // Add all AI tools
+  aiTools.forEach(tool => {
+    const toolCard = document.createElement('div');
+    toolCard.className = 'ai-tool-card';
+    toolCard.innerHTML = `
+      <h3>${tool.name}</h3>
+      <p><strong>কাজ:</strong> ${tool.description}</p>
+      <p><strong>বিস্তারিত:</strong> ${tool.details}</p>
+      <a href="${tool.link}" target="_blank" class="ai-tool-link">Visit Website</a>
+    `;
+    aiToolsListContainer.appendChild(toolCard);
+  });
+  
+  aiToolsSection.classList.add('active');
+  aiToolsSection.hidden = false;
+  
+  // Close drawer on mobile
+  if (window.innerWidth <= 700) {
+    document.getElementById('drawerToggle').checked = false;
+  }
+}
+
+// Hide AI Tools and return to home
+function hideAITools() {
+  document.querySelectorAll('.tool-container').forEach(div => {
+    div.classList.remove('active'); div.hidden = true;
+  });
+  
+  const homeScreen = document.getElementById('homeScreen');
+  homeScreen.classList.add('active');
+  homeScreen.hidden = false;
+}
+
+// Add event listener to AI Tools button
+document.getElementById('showAIToolsBtn').addEventListener('click', showAITools);
+
+// Failover Ads Loader
 function loadFailoverAd(adConfigs, containerId) {
   const container = document.getElementById(containerId);
-  if (!container) return; // Ensure container exists
+  if (!container) return;
   function tryAd(idx) {
     if (idx >= adConfigs.length) {
-        container.innerHTML = '<p style="font-size:0.9rem; padding:10px;">বিজ্ঞাপন লোড হতে সমস্যা হচ্ছে।</p>'; // Fallback message
+        container.innerHTML = '<p style="font-size:0.9rem; padding:10px;">বিজ্ঞাপন লোড হতে সমস্যা হচ্ছে।</p>';
         return;
     }
     const ad = adConfigs[idx];
-    container.innerHTML = ""; // Clear previous
+    container.innerHTML = "";
     if (ad.type === 'iframe') {
       const iframe = document.createElement('iframe');
-      iframe.width = String(ad.width); // Ensure width is string
-      iframe.height = String(ad.height); // Ensure height is string
+      iframe.width = String(ad.width);
+      iframe.height = String(ad.height);
       iframe.style.border = "none";
-      iframe.style.margin = "auto"; // Center iframe
-      iframe.style.display = "block"; // For centering
+      iframe.style.margin = "auto";
+      iframe.style.display = "block";
       iframe.scrolling = "no";
       iframe.src = `https://www.highperformanceformat.com/${ad.key}/invoke.html`;
       let loaded = false;
       iframe.onload = function() { loaded = true; };
       iframe.onerror = function() { tryAd(idx + 1); };
       setTimeout(() => {
-        if (!loaded && document.body.contains(iframe)) tryAd(idx + 1); // Check if iframe is still in DOM
-      }, 3500); // Slightly increased timeout
+        if (!loaded && document.body.contains(iframe)) tryAd(idx + 1);
+      }, 3500);
       container.appendChild(iframe);
     } else if (ad.type === 'js') {
       const script = document.createElement('script');
-      script.type = "text/javascript"; // Explicitly set type
+      script.type = "text/javascript";
       script.src = ad.src;
-      script.async = true; // Load async
+      script.async = true;
       let loaded = false;
       script.onload = function() { loaded = true; };
       script.onerror = function() { tryAd(idx + 1); };
       container.appendChild(script);
-      // For JS ads, it's harder to detect load failure.
-      // We might rely on the ad network's own fallbacks or a more robust detection.
-      // For now, we'll keep a timeout but acknowledge its limitations.
       setTimeout(() => {
         if (!loaded && document.body.contains(script)) tryAd(idx + 1);
        }, 3500);
@@ -449,7 +622,7 @@ function loadFailoverAd(adConfigs, containerId) {
   }
   tryAd(0);
 }
-// চারটি এড কনফিগ (আপনার দেওয়া)
+
 const adConfigs = [
   {
     type: 'iframe',
@@ -474,13 +647,12 @@ const adConfigs = [
     height: '300'
   }
 ];
-// শুধু হোমপেজে এড শো করুন
+
 if (document.getElementById("ad-home")) {
     loadFailoverAd(adConfigs, "ad-home");
 }
 
-
-// --- QR কোড লজিক (ভ্যালিড URL, লোগো, হাই কোয়ালিটি) ---
+// --- QR কোড লজিক ---
 const qrLogos = {
   youtube: "https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png",
   facebook: "https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg",
@@ -510,7 +682,7 @@ const qrValidators = {
   pinterest: url => /^https?:\/\/(www\.)?pinterest\.[a-z.]+\//i.test(url),
   linkedin: url => /^https?:\/\/(www\.)?linkedin\.com\//i.test(url),
   telegram: url => /^https?:\/\/(t\.me|telegram\.me)\/[a-zA-Z0-9_]{5,}/i.test(url),
-  imo: url => /^https?:\/\/(www\.)?imo\.im\//i.test(url), // General check for imo
+  imo: url => /^https?:\/\/(www\.)?imo\.im\//i.test(url),
   messenger: url => /^https?:\/\/m\.me\/[a-zA-Z0-9._-]+/i.test(url),
   reddit: url => /^https?:\/\/(www\.)?reddit\.com\//i.test(url),
   skype: url => /^skype:[a-zA-Z0-9._-]+(\?call|\?chat)?$/i.test(url) || /^https?:\/\/join\.skype\.com\//i.test(url)
@@ -529,60 +701,57 @@ function generateQR() {
   if(type === 'gmail' && !url.startsWith('mailto:') && url.includes('@')) {
       url = 'mailto:' + url;
   } else if (type === 'whatsapp' && /^[0-9]+$/.test(url)) {
-      url = 'https://wa.me/' + url.replace(/[^0-9]/g, ''); // Sanitize phone number
+      url = 'https://wa.me/' + url.replace(/[^0-9]/g, '');
   } else if (type === 'telegram' && !url.startsWith('https://t.me/') && !url.startsWith('https://telegram.me/')) {
       url = 'https://t.me/' + url.replace(/^@/, '');
   }
-
 
   if(qrValidators[type] && !qrValidators[type](url)) {
     qrError.innerHTML = "আপনি সঠিক "+type.charAt(0).toUpperCase()+type.slice(1)+" লিঙ্ক দেননি! অনুগ্রহ করে সঠিক ফর্ম্যাটে দিন।";
     return;
   }
   qrDiv.innerHTML = '<div class="loader"></div>';
-  const qrApiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(url)}&ecc=H&format=png&margin=10&color=004d40&bgcolor=f8f5f2`; // PrimaryDark on MainBG
+  const qrApiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(url)}&ecc=H&format=png&margin=10&color=004d40&bgcolor=f8f5f2`;
   const logoUrl = qrLogos[type];
   
-  setTimeout(()=>{ // Simulate processing
+  setTimeout(()=>{
     const finalCanvas = document.createElement('canvas');
     finalCanvas.width = 250;
     finalCanvas.height = 250;
     const ctx = finalCanvas.getContext('2d');
 
     const qrImg = new window.Image();
-    qrImg.crossOrigin = "Anonymous"; // Ensure crossOrigin is set before src
+    qrImg.crossOrigin = "Anonymous";
     qrImg.onload = function() {
-      ctx.clearRect(0,0,250,250); // Clear canvas
+      ctx.clearRect(0,0,250,250);
       ctx.drawImage(qrImg,0,0,250,250);
       
       if(logoUrl){
         const logoImg = new window.Image();
         logoImg.crossOrigin = "Anonymous";
         logoImg.onload = function() {
-          const logoSize = 50; // Desired logo size
+          const logoSize = 50;
           const x = (250 - logoSize) / 2;
           const y = (250 - logoSize) / 2;
           
-          // White background for logo (slightly larger for padding)
-          ctx.fillStyle = 'rgba(255,255,255,0.85)'; // Semi-transparent white
+          ctx.fillStyle = 'rgba(255,255,255,0.85)';
           ctx.beginPath();
-          ctx.arc(125, 125, logoSize / 2 + 5, 0, 2 * Math.PI); // Center circle
+          ctx.arc(125, 125, logoSize / 2 + 5, 0, 2 * Math.PI);
           ctx.fill();
           
-          // Draw logo
           ctx.drawImage(logoImg, x, y, logoSize, logoSize);
           
-          qrDiv.innerHTML = ''; // Clear loader
+          qrDiv.innerHTML = '';
           qrDiv.appendChild(finalCanvas);
           downloadsDiv.innerHTML = `<a href="${finalCanvas.toDataURL('image/png')}" download="qr-code-${type}.png" class="download-btn">ডাউনলোড PNG</a>`;
         };
-        logoImg.onerror = function() { // If logo fails to load, just show QR
+        logoImg.onerror = function() {
           qrDiv.innerHTML = '';
-          qrDiv.appendChild(finalCanvas); // It would have QR without logo
+          qrDiv.appendChild(finalCanvas);
           downloadsDiv.innerHTML = `<a href="${finalCanvas.toDataURL('image/png')}" download="qr-code-${type}.png" class="download-btn">ডাউনলোড PNG</a>`;
         };
         logoImg.src = logoUrl;
-      } else { // No logo for this type
+      } else {
         qrDiv.innerHTML = '';
         qrDiv.appendChild(finalCanvas);
         downloadsDiv.innerHTML = `<a href="${finalCanvas.toDataURL('image/png')}" download="qr-code-${type}.png" class="download-btn">ডাউনলোড PNG</a>`;
@@ -609,21 +778,21 @@ function generateBarcode() {
   }
   resultDiv.innerHTML = '<div class="loader"></div>';
   
-  let barcodeType = 'CODE128'; // Default
-  if (/^\d{12,13}$/.test(val)) { // EAN-13 consists of 12 data digits and 1 check digit, or 13 digits if check digit is pre-calculated
+  let barcodeType = 'CODE128';
+  if (/^\d{12,13}$/.test(val)) {
       barcodeType = 'EAN13';
-  } else if (/^\d{7,8}$/.test(val)) { // EAN-8
+  } else if (/^\d{7,8}$/.test(val)) {
       barcodeType = 'EAN8';
-  } else if (/^\d{11,12}$/.test(val)) { // UPC-A is 11 data digits + 1 check digit, or 12 digits if check digit pre-calculated.
+  } else if (/^\d{11,12}$/.test(val)) {
       barcodeType = 'UPCA';
-  } // Add more specific checks for other types if needed
+  }
 
   setTimeout(()=>{
     const imgUrl = `https://barcode.tec-it.com/barcode.ashx?data=${encodeURIComponent(val)}&code=${barcodeType}&translate-esc=true&dpi=120&imagetype=Png&rotation=0&color=004d40&bgcolor=f8f5f2&fontcolor=004d40&height=80&barheight=60&quietzone=10`;
     const imgEl = document.createElement('img');
     imgEl.src = imgUrl;
     imgEl.alt = `${barcodeType} Barcode for ${val}`;
-    imgEl.className = 'rounded-image'; // Added class for styling
+    imgEl.className = 'rounded-image';
     imgEl.onload = () => {
         resultDiv.innerHTML = '';
         resultDiv.appendChild(imgEl);
@@ -634,6 +803,7 @@ function generateBarcode() {
     }
   }, 500);
 }
+
 // Image Resizer
 function resizeImage() {
   const fileInput = document.getElementById('resize-upload');
@@ -664,7 +834,7 @@ function resizeImage() {
       canvas.width = width; canvas.height = height;
       const ctx = canvas.getContext('2d');
       ctx.drawImage(img,0,0,width,height);
-      const dataUrl = canvas.toDataURL(file.type); // Use original file type or 'image/png'
+      const dataUrl = canvas.toDataURL(file.type);
       resultDiv.innerHTML = `<img src="${dataUrl}" class="rounded-image" alt="Resized Image" />`;
       downloadsDiv.innerHTML = `<a href="${dataUrl}" download="resized-image.${file.name.split('.').pop()}" class="download-btn">ডাউনলোড</a>`;
     };
@@ -678,6 +848,7 @@ function resizeImage() {
   }
   reader.readAsDataURL(file);
 }
+
 // Video Converter
 function convertVideo() {
   const fileInput = document.getElementById('video-upload');
@@ -716,24 +887,19 @@ function convertVideo() {
 
 // Voice Tool:
 const popularVoices = [
-  // Google WaveNet Voices (High Quality)
-  {name: "Google US English", gender: "male", lang: "en-US"}, {name: "Google UK English Female", gender: "female", lang: "en-GB"}, {name: "Google UK English Male", gender: "male", lang: "en-GB"}, {name: "Google हिन्दी", gender: "female", lang: "hi-IN"}, {name: "Google Deutsch", gender: "female", lang: "de-DE"}, {name: "Google Español", gender: "female", lang: "es-ES"}, {name: "Google Français", gender: "female", lang: "fr-FR"}, {name: "Google Italiano", gender: "female", lang: "it-IT"}, {name: "Google 日本語", gender: "female", lang: "ja-JP"}, {name: "Google 한국의", gender: "female", lang: "ko-KR"}, {name: "Google Русский", gender: "female", lang: "ru-RU"}, {name: "Google 中文（普通话）", gender: "female", lang: "zh-CN"},
-  // Amazon Polly Voices
-  {name: "Amy", gender: "female", lang: "en-GB"}, {name: "Brian", gender: "male", lang: "en-GB"}, {name: "Emma", gender: "female", lang: "en-GB"}, {name: "Ivy", gender: "female", lang: "en-US"}, {name: "Joanna", gender: "female", lang: "en-US"}, {name: "Kendra", gender: "female", lang: "en-US"}, {name: "Kimberly", gender: "female", lang: "en-US"}, {name: "Matthew", gender: "male", lang: "en-US"}, {name: "Salli", gender: "female", lang: "en-US"}, {name: "Aditi", gender: "female", lang: "hi-IN"}, {name: "Raveena", gender: "female", lang: "en-IN"},
-  // Microsoft Azure Voices
-  {name: "Microsoft David", gender: "male", lang: "en-US"}, {name: "Microsoft Zira", gender: "female", lang: "en-US"}, {name: "Microsoft Mark", gender: "male", lang: "en-US"}, {name: "Microsoft Sabina", gender: "female", lang: "es-MX"}, {name: "Microsoft Helena", gender: "female", lang: "es-ES"}, {name: "Microsoft Cosimo", gender: "male", lang: "it-IT"}, {name: "Microsoft Pavel", gender: "male", lang: "ru-RU"}, {name: "Microsoft Huihui", gender: "female", lang: "zh-CN"}, {name: "Microsoft Ayumi", gender: "female", lang: "ja-JP"}, {name: "Microsoft Heami", gender: "female", lang: "ko-KR"},
-  // Apple Voices
-  {name: "Apple Samantha", gender: "female", lang: "en-US"}, {name: "Apple Daniel", gender: "male", lang: "en-GB"}, {name: "Apple Tessa", gender: "female", lang: "en-ZA"}, {name: "Apple Sin-Ji", gender: "female", lang: "zh-HK"}, {name: "Apple Mei-Jia", gender: "female", lang: "zh-TW"}, {name: "Apple Amelie", gender: "female", lang: "fr-CA"}, {name: "Apple Thomas", gender: "male", lang: "fr-FR"},
-  // Bengali/Hindi Voices (Placeholder names, actual availability depends on browser/OS)
-  {name: "Bengali Female", gender: "female", lang: "bn-IN"}, {name: "Bengali Male", gender: "male", lang: "bn-IN"}, {name: "Hindi Female", gender: "female", lang: "hi-IN"}, {name: "Hindi Male", gender: "male", lang: "hi-IN"},
-  // Other examples
-  {name: "Lekha", gender: "female", lang: "ta-IN"}, {name: "Yelda", gender: "female", lang: "tr-TR"}
+  {name: "Google US English", gender: "male", lang: "en-US"}, 
+  {name: "Google UK English Female", gender: "female", lang: "en-GB"}, 
+  {name: "Google हिन्दी", gender: "female", lang: "hi-IN"},
+  {name: "Bengali Female", gender: "female", lang: "bn-IN"}, 
+  {name: "Bengali Male", gender: "male", lang: "bn-IN"}, 
+  {name: "Hindi Female", gender: "female", lang: "hi-IN"}, 
+  {name: "Hindi Male", gender: "male", lang: "hi-IN"}
 ];
 
 function fillVoices() {
   const voiceSelect = document.getElementById('voice-select');
   if (!voiceSelect) return;
-  voiceSelect.innerHTML = ""; // Clear existing options
+  voiceSelect.innerHTML = "";
   let voices = [];
   try {
     voices = speechSynthesis.getVoices();
@@ -743,7 +909,7 @@ function fillVoices() {
     return;
   }
   
-  const addedVoices = new Set(); // To avoid duplicates
+  const addedVoices = new Set();
 
   // Add popular voices if available
   popularVoices.forEach(pv => {
@@ -757,7 +923,7 @@ function fillVoices() {
     }
   });
   
-  // Add any other available voices from the system, prioritizing language match for Bengali and Hindi
+  // Add any other available voices from the system
   const preferredLangs = ['bn-IN', 'bn-BD', 'bn', 'hi-IN', 'hi'];
   preferredLangs.forEach(langPrefix => {
       voices.filter(v => v.lang.startsWith(langPrefix) && !addedVoices.has(v.name)).forEach(v => {
@@ -796,11 +962,10 @@ function fillVoices() {
 }
 
 if ('speechSynthesis' in window) {
-  // Browsers like Firefox might load voices asynchronously
   if (speechSynthesis.getVoices().length === 0) {
     speechSynthesis.onvoiceschanged = fillVoices;
   } else {
-    fillVoices(); // For browsers that load them immediately (e.g., Chrome)
+    fillVoices();
   }
 } else {
     const voiceSelect = document.getElementById('voice-select');
@@ -819,8 +984,7 @@ function generateVoice() {
   const voiceResultDiv = playBtn.parentElement; 
 
   // Clear previous results and show loader
-  if(voiceResultDiv) voiceResultDiv.innerHTML = '<div class="loader"></div>'; // Show loader
-  // Re-append buttons and audio element after clearing, then hide them
+  if(voiceResultDiv) voiceResultDiv.innerHTML = '<div class="loader"></div>';
   if(voiceResultDiv) {
     voiceResultDiv.appendChild(playBtn);
     voiceResultDiv.appendChild(downloadBtn);
@@ -829,7 +993,6 @@ function generateVoice() {
   playBtn.style.display = "none"; 
   downloadBtn.style.display = "none";
   audioElem.style.display = "none";
-
 
   if(!text) { 
       if(voiceResultDiv) voiceResultDiv.innerHTML = '<p style="color:#e53935;font-weight:700;">অনুগ্রহ করে ভয়েসের জন্য টেক্সট লিখুন।</p>';
@@ -854,32 +1017,30 @@ function generateVoice() {
   const selName = voiceSelect.value;
   currentUtterance.voice = voices.find(v=>v.name===selName) || voices.find(v => v.lang.startsWith('bn')) || voices[0];
   
-  if (!currentUtterance.voice && voices.length > 0) { // Fallback if selected not found
+  if (!currentUtterance.voice && voices.length > 0) {
       currentUtterance.voice = voices.find(v => v.lang.startsWith('bn-IN')) || voices.find(v => v.lang.startsWith('bn')) || voices[0];
   }
 
-
-  const synth = window.speechSynthesis;
-  let audioCtx; // Declare outside to ensure it can be closed
+  let audioCtx;
   try {
-      audioCtx = new(window.AudioContext||window.webkitAudioContext)();
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
   } catch (e) {
-      console.error("Error creating AudioContext:", e);
-      if(voiceResultDiv) voiceResultDiv.innerHTML = '<p style="color:#e53935;font-weight:700;">AudioContext তৈরি করা যায়নি।</p>';
-      return;
+    console.error("Error creating AudioContext:", e);
+    if(voiceResultDiv) voiceResultDiv.innerHTML = '<p style="color:#e53935;font-weight:700;">AudioContext তৈরি করা যায়নি।</p>';
+    return;
   }
-  
+
   const dest = audioCtx.createMediaStreamDestination();
-  const mediaRecorder = new MediaRecorder(dest.stream, { mimeType: 'audio/webm; codecs=opus' }); 
+  const mediaRecorder = new MediaRecorder(dest.stream, { mimeType: 'audio/webm' });
   let audioChunks = [];
   
   mediaRecorder.ondataavailable = e => audioChunks.push(e.data);
   mediaRecorder.onstop = () => {
-    const audioBlob = new Blob(audioChunks, {type:'audio/webm'});
+    const audioBlob = new Blob(audioChunks, {type: 'audio/webm'});
     if (voiceBlobUrl) URL.revokeObjectURL(voiceBlobUrl); 
     voiceBlobUrl = URL.createObjectURL(audioBlob);
     
-    if(voiceResultDiv) voiceResultDiv.innerHTML = ''; // Clear loader
+    if(voiceResultDiv) voiceResultDiv.innerHTML = '';
     if(voiceResultDiv) {
         voiceResultDiv.appendChild(playBtn);
         voiceResultDiv.appendChild(downloadBtn);
@@ -892,7 +1053,7 @@ function generateVoice() {
     audioElem.style.display = "none"; 
     downloadBtn.href = voiceBlobUrl;
     downloadBtn.download = `voice-${(selName || 'generated').replace(/\s/g, '_')}.webm`;
-    if (audioCtx && audioCtx.state !== 'closed') audioCtx.close().catch(e => console.warn("AudioContext close error on media stop:", e));
+    if (audioCtx && audioCtx.state !== 'closed') audioCtx.close().catch(e => console.warn("AudioContext close error:", e));
   };
   
   currentUtterance.onstart = () => {
@@ -903,22 +1064,20 @@ function generateVoice() {
         if (mediaRecorder.state === "recording") {
             mediaRecorder.stop(); 
         }
-    }, 250); // Ensure all data is captured
+    }, 250);
   };
   currentUtterance.onerror = (event) => {
     console.error('SpeechSynthesisUtterance.onerror', event);
     if(voiceResultDiv) voiceResultDiv.innerHTML = `<p style="color:#e53935;font-weight:700;">ভয়েস তৈরি করতে সমস্যা হয়েছে: ${event.error}</p>`;
     if (mediaRecorder.state === "recording") mediaRecorder.stop();
-    if (audioCtx && audioCtx.state !== 'closed') audioCtx.close().catch(e => console.warn("AudioContext close error on synth error:", e));
-  }
-  
-  // The following lines for routing synth output are generally not needed for modern browsers
-  // as MediaRecorder on a MediaStreamDestination from a new AudioContext usually captures system audio output
-  // or a dummy output if nothing is connected. SpeechSynthesis output typically goes to default device.
-  // const source = audioCtx.createMediaStreamSource(dest.stream); // This is not how to capture synth.
-  // Instead, we rely on MediaRecorder capturing what SpeechSynthesis outputs to the system.
+    if (audioCtx && audioCtx.state !== 'closed') audioCtx.close().catch(e => console.warn("AudioContext close error:", e));
+  };
 
-  synth.speak(currentUtterance);
+  // Start recording before speaking
+  mediaRecorder.start();
+  
+  // Speak the text
+  speechSynthesis.speak(currentUtterance);
 }
 
 document.getElementById('play-voice').onclick = function(){
@@ -934,16 +1093,13 @@ document.getElementById('play-voice').onclick = function(){
 document.addEventListener('click', function(event) {
   const drawer = document.getElementById('drawer');
   const drawerToggle = document.getElementById('drawerToggle');
-  // Check if drawer and drawerToggle exist to prevent errors if elements are not found
   if (!drawer || !drawerToggle) return;
 
   const isClickInsideDrawer = drawer.contains(event.target);
   const isDrawerOpen = drawerToggle.checked;
-  // Check if the target or its parent is the toggle label
   let isToggleButton = event.target === drawerToggle || 
                         (event.target.matches && event.target.matches('label[for="drawerToggle"]')) ||
                         (event.target.parentElement && event.target.parentElement.matches && event.target.parentElement.matches('label[for="drawerToggle"]'));
-
 
   if (isDrawerOpen && !isClickInsideDrawer && !isToggleButton && window.innerWidth <= 700) {
     let targetElement = event.target;
@@ -955,7 +1111,6 @@ document.addEventListener('click', function(event) {
         }
         targetElement = targetElement.parentElement;
     }
-    // Only close if not a drawer menu item (which handles its own close)
     if(!isDrawerMenuItem) {
         drawerToggle.checked = false;
     }
